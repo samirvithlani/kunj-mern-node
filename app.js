@@ -8,8 +8,6 @@ const userRoutes  = require("./src/routes/UserRoutes")
 app.use("/user",userRoutes)
 
 
-
-
 const dbConnection = require("./src/utils/DbConnection")
 dbConnection()
 
