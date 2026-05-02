@@ -2,8 +2,6 @@ const express = require("express")
 const app = express() // app object
 
 
-
-
 //require routes
 const userRoutes  = require("./src/routes/UserRoutes")
 //app->

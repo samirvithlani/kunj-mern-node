@@ -1,13 +1,11 @@
 //functions --->API
+const userSchema = require("../models/UserModel")
 
-var users = [
-    {id:1,name:"ram",age:23,status:true},
-    {id:2,name:"shyam",age:24,status:true},
-    {id:3,name:"krishna",age:25,status:true},
-    {id:4,name:"deep",age:26,status:true},
-]
+const getAllUsers =async(req,res)=>{
 
-const getAllUsers =(req,res)=>{
+    //db.users.find()
+    
+     const users = await userSchema.find()
 
     res.json({
         message:"users found",
