@@ -1,0 +1,90 @@
+//GET : browser
+//  http://localhost:3000/test
+app.get("/test",(req,res)=>{
+    console.log("test api called...")
+    res.send("ok")
+})
+
+const user = {
+    id:1,
+    name:"kunj",
+    age:23,
+    salary:45000
+}
+
+//localhost:3000/user
+app.get("/user",(req,res)=>{
+    res.json({
+        message:"user api called..",
+        data:user
+    })
+})
+
+var users = [
+    {id:1,name:"ram",age:23,status:true},
+    {id:2,name:"shyam",age:24,status:true},
+    {id:3,name:"krishna",age:25,status:true},
+    {id:4,name:"deep",age:26,status:true},
+]
+
+app.get("/users",(req,res)=>{
+    res.json({
+        message:"user fetched..",
+        data:users
+    })
+})
+
+
+
+NODE JS:
+
+
+java --> server
+js --> client
+
+
+js -->server --> node run time
+nodejs --> built js --engine v8
+
+node js --. apis create [express fw]
+
+app.js | server.js | index.js | main.js
+
+import export
+
+module es5 es6
+es5 --> require
+es6 import
+
+
+seerver : 
+jsp ->tomcat
+python -->own server
+node ->server
+
+node :
+ http module :
+ express fw: --> it has no socket
+
+ hot relaod -->save server auto rest...
+
+npm i nodemon -g
+npm i nodemon --dev 
+
+
+folder:
+src
+ -->controllers
+ -->models[beans]
+ -->routes-->url
+ -->utils
+ -->middleware
+
+
+USER MODULE
+localhost:3000/users -->endpoint
+
+Server -->app.js --> userRoutes --> controller[userController] -->
+buinsess logic--[userModel[db layer]]==>response end user
+
+
