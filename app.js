@@ -12,6 +12,8 @@ app.use("/user",userRoutes)
 
 
 
+const dbConnection = require("./src/utils/DbConnection")
+dbConnection()
 
 const PORT = 3000
 app.listen(PORT,()=>{

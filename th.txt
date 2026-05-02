@@ -88,3 +88,17 @@ Server -->app.js --> userRoutes --> controller[userController] -->
 buinsess logic--[userModel[db layer]]==>response end user
 
 
+DATABASE :mongo db
+
+2 pacjages:
+mongodb: mogo native func:
+mongoose: mongoose + mongo native
+
+
+-->collection own create:
+mongoose orm fw --> collection --->
+
+collection --> objecct --->
+
+
+
