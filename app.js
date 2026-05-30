@@ -1,6 +1,9 @@
 const express = require("express")
 const app = express() // app object
 
+//allow json data in request apply global middlewar
+app.use(express.json()) // it will accept json object data in request.
+
 
 //require routes
 const userRoutes  = require("./src/routes/UserRoutes")

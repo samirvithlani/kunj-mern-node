@@ -35,7 +35,39 @@ const getUserById = async(req,res)=>{
 
 
 }
+
+const getUsersByName = async(req,res)=>{
+
+    const name = req.params.name
+    const users = await userSchema.find({name:name})
+    res.json({
+        data:users
+    })
+}
+
+const addUser = async(req,res)=>{
+
+        //req.body -->console..
+        //console.log("req.body..",req.body)
+        //db.users.insertOne({name:"",age:23,email:"",password:""})
+        //db.users -->userSchema
+        const savedUser = await userSchema.create(req.body)
+        res.json({
+            message:"user added..",
+            data:savedUser
+        })
+
+
+}
+
+//req -->params, query ,body, headers
+//params -->id-
+//query -->multipule params searcg
+//body ->object0-->create
+//headers auth
 module.exports ={
     getAllUsers,
-    getUserById
+    getUserById,
+    getUsersByName,
+    addUser
 }
