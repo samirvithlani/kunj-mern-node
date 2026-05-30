@@ -60,6 +60,22 @@ const addUser = async(req,res)=>{
 
 }
 
+const deleteUser = async(req,res)=>{
+    //db.users.deleteOne({_id:req.params.id})
+    //userScahma.deleteOne({})
+    const deletedUser = await userSchema.findByIdAndDelete(req.params.id)
+    if(deletedUser){
+        res.json({
+            message:"user deleted"
+        })
+    }
+    else{
+        res.json({
+            message:"user not found to delete."
+        })
+    }
+}
+
 //req -->params, query ,body, headers
 //params -->id-
 //query -->multipule params searcg
@@ -69,5 +85,6 @@ module.exports ={
     getAllUsers,
     getUserById,
     getUsersByName,
-    addUser
+    addUser,
+    deleteUser
 }
